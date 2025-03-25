@@ -1,0 +1,5 @@
+Intalar:
+
+- Live server
+- Live Preview
+- Draw.io
