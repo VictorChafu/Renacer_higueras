@@ -40,8 +40,7 @@ nav{
     padding-right: 20px;
 }
 
-.navbar ul{
-}
+
 .navbar li{
     float: left;
     display: inline; /* Así queda para el lado el listado*/
