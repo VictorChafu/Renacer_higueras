@@ -1,35 +1,83 @@
+/*la paleta se colores es la siguiente: 
+- #4A4947
+- #BAB58D
+- #D8D2C2
+
+- #B17457
+- #CAD3D0
+- #F4EEEE
+
+*/
+
 *{ 
     margin: 0;
     padding: 0;
 }
 
 header{
+    width: 100%;
     height: 100vh;
+    background-image:url(../img/FotosRenacerHigueras/Iglesia/portada.jpg);
+    background-position: 5%;
+    background-size: auto;
 }
 nav{
-    background-color: aqua;
+    backdrop-filter: brightness(0.9);
+    height: 10%;
     width: 100%;
-    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
 }
-nav ul{
-    list-style: none;
-    margin: 0 10px 0 10px;
+.logo{
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
 }
-nav li{
-    border-radius: 5px;
+.navbar{
+    padding-right: 20px;
+}
+
+.navbar ul{
+}
+.navbar li{
     float: left;
-    font-size: 16px;
-    margin-right: 10px;
-    text-align: center;
-    display: inline; /*Así queda para el lado el listado*/
+    display: inline; /* Así queda para el lado el listado*/
 }
 
 
-nav ul li a{
-    display: block;
+.navbar ul li a{
+    font-family: "League Spartan", sans-serif;
+    margin: 20px;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #F4EEEE;
     text-decoration: none;
-    
 }
-li a:hover{
-    background-color: black;
+.navbar ul li  :hover{
+    color: #d8d7d7;
+}
+.portada{
+    backdrop-filter: brightness(0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 100%;
+    height: 90%;
+}
+.portada h1{
+    padding-left: 50px;
+    padding-top: 10px;
+    
+    padding-bottom: 60px;
+    color: #F4EEEE;
+    font-size: 60px;
+    font-family: "League Spartan", sans-serif;
+}
+.portada p{
+    font-size: 40px;
+    padding-left: 50px;
+    color: #CAD3D0;
 }
