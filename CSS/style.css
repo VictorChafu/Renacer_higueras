@@ -17,9 +17,9 @@
 header{
     width: 100%;
     height: 100vh;
-    background-image:url(../img/FotosRenacerHigueras/Iglesia/portada.jpg);
+    background-image:url(../img/FotosRenacerHigueras/Iglesia/iglesia.jpg);
     background-position: 5%;
-    background-size: auto;
+    background-size: cover;
 }
 nav{
     backdrop-filter: brightness(0.9);
@@ -70,14 +70,15 @@ nav{
 .portada h1{
     padding-left: 50px;
     padding-top: 10px;
-    
+    text-transform: uppercase;
     padding-bottom: 60px;
     color: #F4EEEE;
     font-size: 60px;
-    font-family: "League Spartan", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 .portada p{
     font-size: 40px;
     padding-left: 50px;
+    font-family: "Poppins", sans-serif;
     color: #CAD3D0;
 }
