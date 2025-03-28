@@ -1,167 +1,203 @@
 *{ 
-    margin: 0;
-    padding: 0;
-    font-family: "League Spartan", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "League Spartan", sans-serif;
 }
-.servicios {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  
-  .instagram {
-    flex: 1;
-    min-width: 300px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* aqui creo una cuadricula de 3 columnas */
-    grid-gap: 0.5rem; /* le hago unos espacios a la imagenes */
-  }
 
-  /* Estilo básico para las imágenes */
-.instagram img {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* Mantiene las imágenes cuadradas */
-    object-fit: cover; /* Asegura que las imágenes cubran todo el espacio */
-    transition: all 0.3s ease; /* animacion suave al pasar por encima UwU */
-  }
-  
-  .instagram img {
-    position: relative;
-    display: block;
-  }
-  
-  /* creo un before para hacer un post algo luego de hacer la animacion */
-  .instagram img::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Capa negra semitransparente */
-    opacity: 0; /* Inicialmente invisible */
-    transition: opacity 0.3s ease; /* Transición suave */
-    z-index: 1;
-  }
-  
-/* Hace visible la capa oscura al pasar el ratón */
-.instagram img:hover::before {
-    opacity: 1;
-  }
-  
-  /* Configuración del contenedor de imagen para efecto Instagram más realista */
-  .instagram .contenedor_imagen {
-    position: relative;
-    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
-  }
-  
-  .instagram .contenedor_imagen img {
-    width: 100%;
-    display: block;
-  }
-  
-  /* Capa de superposición que aparece al pasar el ratón */
-  .instagram .contenedor_imagen .superposicion {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Fondo oscuro semitransparente */
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    opacity: 0; /* Inicialmente invisible */
-    transition: opacity 0.3s ease; /* Transición suave */
-  }
-  
-  /* Hace visible la superposición al pasar el ratón */
-  .instagram .contenedor_imagen:hover .superposicion {
-    opacity: 1;
-  }
-  
-  /* Estilo para los iconos de likes y comentarios */
-  .instagram .contenedor_imagen .iconos_superposicion {
-    display: flex;
-    gap: 1rem; /* Espacio entre iconos */
-    color: white; /* Color del texto */
-  }
-  
-  /* Estilo para la información de servicios (lado derecho) */
-  .servicios > div:nth-child(2) {
-    flex: 1;
-    min-width: 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem; /* Espacio entre secciones */
-  }
-  
-  /* Estilo para cada sección de información */
-  .servicio_general,
-  .plantaciones,
-  .grupos_pequenos {
-    background-color: #f8f8f8; /* Fondo gris claro */
-    padding: 1.5rem;
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-  }
-  
-    /* Estilo para los titulos de las secciones */
-  h3 {
-    color: #333;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-  }
-  
-  h4 {
-    color: #555;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-  }
-  
-  p {
-    color: #666;
-    margin: 0.3rem 0;
-  }
-  
-  /* Estilo para el botón */
- #InformacionServicios {
-    background-color: #4A4947; /* Azul de Instagram */
-    color: white;
-    border: none;
-    padding: 0.7rem 1.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease; /* Transición suave del color */
-  }
+body {
+  background-color: #ffffff;
+}
 
-.servicios #InformacionServicios:hover {
-    background-color: #3b3a38; /* Color más oscuro al pasar el ratón */
-  }
+        
+     
+        .servicios {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .instagram {
+            flex: 1;
+            min-width: 300px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* aqui creo una cuadricula de 3 columnas */
+            grid-gap: 0.5rem; /* le hago unos espacios a la imagenes */
+        }
 
-  /* Ajustes responsivos para pantallas medianas */
-  @media (max-width: 768px) {
-    .servicios {
-      flex-direction: column; /* Cambia a disposición vertical en pantallas pequeñas */
-    }
-  
-    .instagram {
-      grid-template-columns: repeat(3, 1fr); /* Mantiene 3 columnas */
-    }
-  }
-  
-  /* Ajustes responsivos para pantallas muy pequeñas */
-  @media (max-width: 480px) {
-    .instagram {
-      grid-template-columns: repeat(2, 1fr); /* Reduce a 2 columnas en móviles */
-    }
-  }
-  
-  
+        /* Estilo básico para las imágenes */
+        .instagram img {
+            width: 100%;
+            aspect-ratio: 1 / 1; /* Mantiene las imágenes cuadradas */
+            object-fit: cover; 
+            transition: all 0.3s ease; /* animacion suave al pasar por encima UwU */
+            position: relative;
+            display: block;
+        }
+        
+        /* creo un before para hacer un post algo luego de hacer la animacion */
+        .instagram img::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3); /* Capa negra semitransparente */
+            opacity: 0; 
+            transition: opacity 0.3s ease; /* Transición suave */
+            z-index: 1;
+        }
+        
+        /* Hace visible la capa oscura al pasar el ratón */
+        .instagram img:hover::before {
+            opacity: 1;
+        }
+        
+        /* Configuración del contenedor de imagen para efecto Instagram más realista */
+        .instagram .contenedor_imagen {
+            position: relative;
+            overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+        }
+        
+        .instagram .contenedor_imagen img {
+            width: 100%;
+            display: block; 
+        }
+        
+        /* Capa de superposición que aparece al pasar el ratón */
+        .instagram .contenedor_imagen .superposicion {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Fondo oscuro semitransparente */
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; 
+            opacity: 0; 
+            transition: opacity 0.3s ease; /* Transición suave */
+        }
+        
+        /* Hace visible la superposición al pasar el ratón */
+        .instagram .contenedor_imagen:hover .superposicion {
+            opacity: 1;
+        }
+        
+        /* Estilo para los iconos de likes y comentarios */
+        .instagram .contenedor_imagen .iconos_superposicion {
+            display: flex;
+            gap: 1rem; 
+            color: white; 
+        }
+        
+        /* Estilo para la información de servicios (lado derecho) */
+        .servicios > div:nth-child(2) {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem; 
+        }
+        
+        /* Estilo para cada sección de información */
+        .servicio_general,
+        .plantaciones,
+        .grupos_pequenos {
+            background-color: #f8f8f8; 
+            padding: 1.5rem;
+            border-radius: 8px; /* Bordes redondeados */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+        }
+        
+        /* Estilo para los titulos de las secciones */
+        .informarcionservicio h3 {
+            color: #5e2d2d;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .informarcionservicio h4 {
+            color: #8f7c58;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .informarcionservicio p {
+            color: #504f4f;
+            margin: 0.3rem 0;
+        }
+        
+        /* Estilo para el botón */
+        #InformacionServicios {
+            background-color: #757472; /* Color gris oscuro */
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease; /* Transición suave del color */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .servicios #InformacionServicios:hover {
+            background-color: #3b3a38; /* Color más oscuro al pasar el ratón */
+        }
+
+        /* Ajustes responsivos para pantallas medianas */
+        @media (max-width: 768px) {
+            .servicios {
+                flex-direction: column; /* Cambia a disposición vertical en pantallas pequeñas */
+            }
+            
+            .instagram {
+                grid-template-columns: repeat(3, 1fr); /* Mantiene 3 columnas */
+            }
+        }
+        
+
+        @media (max-width: 480px) {
+            .instagram {
+                grid-template-columns: repeat(2, 1fr); /* Reduce a 2 columnas en móviles */
+            }
+        }
+        
+        /* Estilos para el botón de like */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            position: relative;
+        }
+        
+        .icon {
+            width: 20px;
+            height: 20px;
+            transition: 0.2s linear;
+        }
+        
+        .icon path {
+            fill: white;
+            transition: 0.2s linear;
+        }
+        
+        .btn:hover > .icon {
+            transform: scale(1.2);
+        }
+        
+        .btn:hover > .icon path {
+            fill: rgb(255, 0, 0);
+        }

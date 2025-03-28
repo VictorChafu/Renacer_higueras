@@ -82,3 +82,14 @@ nav{
     font-family: "Poppins", sans-serif;
     color: #CAD3D0;
 }
+
+
+ body {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
