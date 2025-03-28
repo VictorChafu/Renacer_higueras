@@ -96,7 +96,7 @@ nav{
     }
   }
   
-  /* Aplicar la animación a los elementos principales */
+  /* aplicacion de la animacion a nivel general */
   body > * {
     opacity: 0;
     animation: fadeIn 0.8s ease forwards;
