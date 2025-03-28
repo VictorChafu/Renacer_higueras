@@ -84,12 +84,55 @@ nav{
 }
 
 
- body {
+/* Efecto de aparición para elementos de la página */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Aplicar la animación a los elementos principales */
+  body > * {
     opacity: 0;
-    transition: opacity 1.5s ease-in-out;
-}
-
-body.loaded {
-    opacity: 1;
-}
+    animation: fadeIn 0.8s ease forwards;
+  }
+  
+  /* Retrasar la animación para elementos secuenciales */
+  header {
+    animation-delay: 0.1s;
+  }
+  
+  .vision {
+    animation-delay: 0.3s;
+  }
+  
+  .pastores {
+    animation-delay: 0.5s;
+  }
+  
+  .servicios {
+    animation-delay: 0.7s;
+  }
+  
+  .ministerios {
+    animation-delay: 0.9s;
+  }
+  
+  .jde {
+    animation-delay: 1.1s;
+  }
+  
+  .contacto {
+    animation-delay: 1.3s;
+  }
+  
+  footer {
+    animation-delay: 1.5s;
+  }
+  
 
