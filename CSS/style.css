@@ -124,20 +124,21 @@ nav{
 .versiculo{
   display: flex;
   align-items: center;
+  margin: 0 15px 0 15px;
   flex-direction: column;
 }
 .versiculo h2{
   font-size: 40px;
-  color: #bab486;
+  color: black;
   margin-top: 10px;
 }
 .versiculo p{
-  text-align: center;
+  text-align:center;
   line-height: 1;
   padding-top: 20px;
   font-size: 20px;
   text-transform:unset;
-  color: black;
+  color: #8f8a69;
 }
 
 .pastores{
@@ -207,7 +208,7 @@ nav{
   
   .servicios {
     animation-delay: 0.7s;
-    background-color: #BAB58D;
+    background-color: #F4EEEE;
   }
   
   .ministerios {
