@@ -217,7 +217,10 @@ nav{
   width: 50%; 
   height: auto;
 }
-
+.vacio img{
+  width: 50vh;
+  margin: 30px;
+}
 
 /* Efecto de aparición para elementos de la página */
 @keyframes fadeIn {
