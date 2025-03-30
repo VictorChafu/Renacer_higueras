@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/icons.css">
     <link rel="stylesheet" href="CSS/vision.css">
+    <link rel="stylesheet" href="CSS/JE.css">
+    <link rel="stylesheet" href="CSS/contacto.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
 </head>
 <body >
@@ -23,9 +26,9 @@
             <div class="navbar">
             <ul>
                 <li><a href="">Inicio</a> </li>
-                <li><a href="">Nosotros</a></li>
-                <li><a href="">Pastores</a></li>
-                <li><a href="">Ministerios</a></li>
+                <li><a href="#pastores">Pastores</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#ministerios">Ministerios</a></li>
                 <li><a href="">Colaboradores</a></li>
 
             </ul>
@@ -50,13 +53,13 @@
         <p>Ser una Iglesia que trascienda la sociedad, una Iglesia que se expanda a diferentes comunas, alcanzando a muchos con un evangelio integral y convertirlos en fierles discipulos de Jesucristo a través de la palabra de Dios e incorporandolos a la iglesia local</p> 
         </div>  -->    
         
-        <div class="versiculo">
+        <div class="versiculo" id="pastores">
         <h2>ISAIAS 54:2-3</h2> <!---->
         <P>“Ensancha el espacio de tu carpa, y despliega las cortinas de tu morada <br> ¡NO TE LIMITES! <br> Alarga tus cuerdas y refuerza tus estacas, porque a derecha y a izquiera te extenderás; <br> tu descendencia desalojara naciones, y poblara ciudades desoladas.”</P> <!--Va el versiculo-->
         </div>
     </section>
 
-    <section class="pastores">
+    <section class="pastores" >
         <img class="pfoto" src="./img/FotosRenacerHigueras/Pastores/fondo transparente.png" alt="">
         <div class="pastor">
         <h2>Pastores principales</h2>
@@ -65,8 +68,8 @@
         </div>
     </section>
 
-    
-    <section class="servicios">
+
+    <section class="servicios" id="servicios">
         <!-- Contenedor de la galería de Instagram (lado izquierdo) -->
         <div class="instagram">
             <!-- Contenedores de imágenes con efecto hover estilo Instagram -->
@@ -349,40 +352,289 @@
     
     
 
-    <section class="ministerios"> <!--Acá que las fotos queden a un lado y al otro el texto-->  
-
-        <div class="yr">
-
-            <div class="desc_young">
+    <section class="ministerios" id="ministerios">
+        <!-- Slide 1: Youngs -->
+        <div class="slide youngs active">
+            <div class="desc">
                 <h2>Youngs</h2>
                 <p>Sábados 11:00 am</p>
             </div>
-            
-            <div class="vacio">
-                <img src="./img/logos sin fondoRH/9.png" alt="">
+            <div class="imagen" style="background-image: url('./img/FotosYoungs/raiz.jpg');">
+                <img src="./img/logos sin fondoRH/9.png" alt="Logo Youngs">
             </div>
-        </div>    
+        </div>
 
-        <div class="kids">
-            <div>
+        <!-- Slide 2: RH KIDS -->
+        <div class="slide kids">
+            <div class="desc">
                 <h2>RH KIDS</h2>
                 <p>Sábado 16:00 pm</p>
-            </div>    
-        
+            </div>
+            <div class="imagen" style="background-image: url('./img/RHKids/403767133_1422058038742981_6644863969344214249_n.jpg');">
+            </div>
+        </div>
+
+        <!-- Slide 3: Amadas -->
+        <div class="slide amadas">
+            <div class="desc">
+                <h2>Amadas</h2>
+                <p>Miércoles 00:00 pm</p>
+            </div>
+            <div class="imagen" style="background-image: url('img/FotosRenacerHigueras/Iglesia/Adoracion1.jpg');">
+            </div>
+        </div>
+
+        <!-- Slide 4: Hombres De Verdad -->
+        <div class="slide hombres">
+            <div class="desc">
+                <h2>Hombres De Verdad</h2>
+                <p>Martes 00:00 pm</p>
+            </div>
+            <div class="imagen" style="background-image: url('./img/FotosRenacerHigueras/Iglesia/440524582_362718300124332_3689335614187581742_n.jpg');">
+            </div>
+        </div>
+
+        <!-- Botones de navegacion -->
+        <div class="prev-btn">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="next-btn">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+
+        <!-- Indicadores -->
+        <div class="indicators">
+            <div class="indicator active" data-index="0"></div>
+            <div class="indicator" data-index="1"></div>
+            <div class="indicator" data-index="2"></div>
+            <div class="indicator" data-index="3"></div>
         </div>
     </section>
 
-    <section class="jde"> <!--Jardin de esperanza, ojalá que ocupe el 100vh de height, carrusell, e información. Que tenga un titulo, un carrusel y abajo una breve descripción y un botón de más info -->
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardín de Esperanza</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .jde {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #F4EEEE;
+        }
+
+        .jde h2 {
+            text-align: center;
+            padding: 30px 0;
+            font-size: 48px;
+            color: #4A4947;
+            font-family: "Bebas Neue", Arial, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Estilos del carrusel */
+        .carrusel-container {
+            position: relative;
+            width: 100%;
+            height: 50vh;
+            overflow: hidden;
+        }
+
+        .carrusel {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carrusel-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background-size: cover;
+            background-position: center;
+            transition: opacity 0.8s ease-in-out;
+        }
+
+        .carrusel-slide.active {
+            opacity: 1;
+        }
+
+        /* Flechas de navegación */
+        .carrusel-prev, .carrusel-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.3);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .carrusel-prev {
+            left: 20px;
+        }
+
+        .carrusel-next {
+            right: 20px;
+        }
+
+        .carrusel-prev:hover, .carrusel-next:hover {
+            background-color: rgba(255, 255, 255, 0.6);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        /* Indicadores */
+        .carrusel-indicadores {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .carrusel-indicador {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .carrusel-indicador.active {
+            background-color: white;
+        }
+
+        /* Sección de información */
+        .info-container {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .info-container h3 {
+            font-size: 28px;
+            color: #B17457;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .info-container p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #4A4947;
+            margin-bottom: 25px;
+        }
+
+        .info-container button {
+            background-color: #BAB58D;
+            color: #4A4947;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .info-container button:hover {
+            background-color: #a8a37a;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .jde {
+                height: auto;
+                min-height: 100vh;
+            }
+
+            .jde h2 {
+                font-size: 36px;
+                padding: 20px 0;
+            }
+
+            .carrusel-container {
+                height: 40vh;
+            }
+
+            .info-container {
+                padding: 20px;
+            }
+
+            .info-container h3 {
+                font-size: 24px;
+            }
+
+            .info-container p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="jde">
         <h2>Jardín de Esperanza</h2>
-        <div class="carrusel">
-            <!--las fotos irán como background-->
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+        
+        <div class="carrusel-container">
+            <div class="carrusel">
+                <!-- Imágenes como background -->
+                <div class="carrusel-slide active" style="background-image: url('./img/FotosRenacerHigueras/Misiones/440348273_18183056869295087_6209447266869666203_n.jpg');"></div>
+                <div class="carrusel-slide" style="background-image: url('./img/FotosRenacerHigueras/Misiones/442302380_700756772075114_1873228777246262693_n.jpg');"></div>
+                <div class="carrusel-slide" style="background-image: url('./img/FotosRenacerHigueras/Misiones/465806805_18203472271295087_4281570933286294623_n.jpg');"></div>
+                <div class="carrusel-slide" style="background-image: url('./img/FotosRenacerHigueras/Misiones/467606969_18204937480295087_6337764540199656207_n.jpg');"></div>
+            </div>
+            
+            <!-- Controles de navegación -->
+            <div class="carrusel-prev">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="carrusel-next">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            
+            <!-- Indicadores -->
+            <div class="carrusel-indicadores">
+                <div class="carrusel-indicador active" data-index="0"></div>
+                <div class="carrusel-indicador" data-index="1"></div>
+                <div class="carrusel-indicador" data-index="2"></div>
+                <div class="carrusel-indicador" data-index="3"></div>
+            </div>
         </div>
-    
-        <div>
+        
+        <div class="info-container">
             <h3>Los campos están listos...</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae repellat sit esse, illo aliquam labore, odit repellendus iste at atque optio blanditiis quasi eum enim et facilis illum inventore cupiditate!</p>
             <button>Más información</button>
@@ -391,38 +643,32 @@
 
     <section class="contacto">
         <div class="escribenos">
+            <h3>Escríbenos</h3>
             <div>
-                <h3>Escribenos</h3>
+                <label for="nombre">Tu nombre</label>
+                <input type="text" id="nombre" required/>
             </div>
             <div>
-                <label for="">Nombre</label>
-                <input type="text" id="user" required/>
+                <label for="correo">Tu correo electrónico</label>
+                <input type="email" id="correo" required/>
             </div>
             <div>
-                <label for="">Número de telefono</label>
-                <input type="text" id="user" required/>
+                <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" required/>
             </div>
             <div>
-                <label for="">Correo electronico</label>
-                <input type="text" id="user" required/>
+                <label for="mensaje">Tu mensaje (opcional)</label>
+                <textarea id="mensaje"></textarea>
             </div>
-            <div>
-                <label for="">Oramos por</label>
-                <input type="text" id="user" required/>
-            </div>
-            <button type="submit"> Enviar </button>
+            <button type="submit">Enviar</button>
         </div>
         
         <div class="datos">
-            <h3>Contacto</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut aliquid ad totam minima</p>
-        </div>
-        <div> <!--Acá irán los iconos con los contactos a la derecha-->
+            <h3>Contactos</h3>            
             <div class="numero">
                 <i class="fa-solid fa-phone"></i>
-                <a href="tel:987239189">987239189</a>
+                <span><span class="bold">Fono:</span> +569 73174008</span>
             </div>
-        </div>
     </section>
 
     <footer>
@@ -430,6 +676,8 @@
     </footer>
     <!-- aniadi un efecto de aparacion pero ahi vemos si te gusta -->
    
+    <script src="JS/index.js"></script>
+    <script src="JS/CarrouselJE.js"></script>
 
     
     

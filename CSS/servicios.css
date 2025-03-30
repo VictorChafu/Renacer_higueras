@@ -1,23 +1,13 @@
-*{ 
-  margin: 0;
-  padding: 0;
-  font-family: "League Spartan", sans-serif;
-}
 
-body {
-  background-color: #ffffff;
+.servicios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
 }
-
-        
-     
-        .servicios {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            max-width: 1500px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
         
         .instagram {
             flex: 1;
@@ -101,13 +91,14 @@ body {
             display: flex;
             flex-direction: column;
             gap: 2rem; 
+            
         }
         
         /* Estilo para cada sección de información */
         .servicio_general,
         .plantaciones,
         .grupos_pequenos {
-            background-color: #f8f8f8; 
+            background-color: #ffffff; 
             padding: 1.5rem;
             border-radius: 8px; /* Bordes redondeados */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 

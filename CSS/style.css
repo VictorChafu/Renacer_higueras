@@ -176,50 +176,173 @@ nav{
   font-size: large;
 }
 
-.ministerios{
-  display: flex;
-  flex-direction: column;
+.ministerios {
+  position: relative;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 
-.yr{
+.slide {
+  position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
 }
-.desc_young{
-  background-color: #0F0BDE;
-  height: 100vh;
+
+.slide.active {
+  opacity: 1;
+}
+
+.desc {
   width: 50%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.desc_young h2{
-  font-size:90px;
-  color: #ff3d00;
-  text-transform: uppercase;
-  font-family: "Bebas Neue", sans-serif;
-}
-.desc_young p{
   color: white;
-  font-size: 30px;
+  text-align: center;
+  padding: 0 20px;
 }
-.vacio{
+
+.desc h2 {
+  font-size: 80px;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", Arial, sans-serif;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.desc p {
+  font-size: 26px;
+  font-weight: lighter;
+}
+
+.imagen {
+  width: 50%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
-  background: url(../img/FotosYoungs/raiz.jpg) no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
-  width: 50%; 
-  height: auto;
+  align-items: center;
 }
-.vacio img{
-  width: 50vh;
-  margin: 30px;
+
+.imagen img {
+  max-width: 50vh;
+  max-height: 50vh;
+}
+
+/* Estilos para cada ministerio */
+.youngs .desc {
+  background-color: #0F0BDE;
+}
+
+.youngs .desc h2 {
+  color: #ff3d00;
+}
+
+.kids .desc {
+  background-color: #ebc781;
+}
+
+.kids .desc h2 {
+  color: #666456;
+}
+
+.amadas .desc {
+  background-color: #B17457;
+}
+
+.amadas .desc h2 {
+  color: #F4EEEE;
+}
+
+.hombres .desc {
+  background-color: #686661;
+}
+
+.hombres .desc h2 {
+  color: #4A4947;
+}
+
+/* Flechas de navegación */
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.prev-btn {
+  left: 20px;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Indicadores */
+.indicators {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 10;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.indicator.active {
+  background-color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slide {
+      flex-direction: column-reverse;
+  }
+
+  .desc, .imagen {
+      width: 100%;
+      height: 50vh;
+  }
+
+  .desc h2 {
+      font-size: 50px;
+  }
+
+  .desc p {
+      font-size: 20px;
+  }
 }
 
 /* Efecto de aparición para elementos de la página */
@@ -252,7 +375,7 @@ nav{
   
   .servicios {
     animation-delay: 0.7s;
-    background-color: #F4EEEE;
+    background-color: #ffffff;
   }
   
   .ministerios {
