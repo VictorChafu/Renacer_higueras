@@ -379,10 +379,12 @@ nav{
   }
   
   .ministerios {
+    animation-delay: 1.1s;
   }
   
   .jde {
     animation-delay: 1.1s;
+    
   }
   
   .contacto {
