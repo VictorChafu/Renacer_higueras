@@ -2,185 +2,277 @@
 - #4A4947
 - #BAB58D
 - #D8D2C2
-
 - #B17457
 - #CAD3D0
 - #F4EEEE
-
 */
 
-*{ 
-    margin: 0;
-    padding: 0;
-    font-family: "League Spartan", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "League Spartan", sans-serif;
+  box-sizing: border-box;
 }
 
-header{
-    width: 100%;
-    height: 100vh;
-    background-image:url(../img/FotosRenacerHigueras/Iglesia/iglesia.jpg);
-    background-position: 5%;
-    background-size: cover;
+/* Efecto de aparición para elementos de la página */
+@keyframes fadeIn {
+  from {
     opacity: 0;
-    animation: fadeIn 0.9s ease forwards;
-}
-nav{
-    backdrop-filter: brightness(0.9);
-    height: 10%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: transparent;
-}
-.logo{
-    width: 80px;
-    height: 80px;
-    margin-left: 20px;
-}
-.navbar{
-    padding-right: 20px;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-
-.navbar li{
-    float: left;
-    display: inline; /* Así queda para el lado el listado*/
-}
-
-
-.navbar ul li a{
-    font-family: "League Spartan", sans-serif;
-    margin: 20px;
-    text-transform: uppercase;
-    font-size: 15px;
-    color: #F4EEEE;
-    text-decoration: none;
-}
-.navbar ul li  :hover{
-    color: #d8d7d7;
-}
-.portada{
-    backdrop-filter: brightness(0.9);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-    width: 100%;
-    height: 90%;
-}
-.portada h1{
-    padding-left: 50px;
-    padding-top: 10px;
-    text-transform: uppercase;
-    padding-bottom: 100px;
-    color: #F4EEEE;
-    font-size: 60px;
-    font-family: "Poppins", sans-serif;
-}
-.portada p{
-    font-size: 40px;
-    padding-left: 50px;
-    font-family: "Poppins", sans-serif;
-    color: #CAD3D0;
-}
-.wave{
-  position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-
-.vision{
-  background-color:white ;
+/* HEADER */
+header {
   width: 100%;
-  height: 40vh;
+  height: 100vh;
+  background-image: url(../img/FotosRenacerHigueras/Iglesia/iglesia.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  animation: fadeIn 0.9s ease forwards;
+  animation-delay: 0.1s;
+}
+
+nav {
+  backdrop-filter: brightness(0.9);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  position: relative;
+  z-index: 100;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-left: 20px;
+}
+
+.navbar {
+  padding-right: 20px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar ul li a {
+  font-family: "League Spartan", sans-serif;
+  margin: 20px;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #f4eeee;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #d8d7d7;
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #f4eeee;
+  border-radius: 3px;
+}
+
+.portada {
+  backdrop-filter: brightness(0.9);
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
+  height: 90%;
 }
-.vision img{
+
+.portada h1 {
+  padding-left: 50px;
+  padding-top: 10px;
+  text-transform: uppercase;
+  padding-bottom: 100px;
+  color: #f4eeee;
+  font-size: 60px;
+  font-family: "Poppins", sans-serif;
+}
+
+.portada p {
+  font-size: 40px;
+  padding-left: 50px;
+  font-family: "Poppins", sans-serif;
+  color: #cad3d0;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
+
+/* VISION */
+.vision {
+  background-color: white;
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  animation-delay: 0.3s;
+  opacity: 0;
+  animation: fadeIn 0.9s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.vision img {
   width: 150px;
   height: auto;
 }
-.lcarpa{
+
+.lcarpa {
   padding-top: 30px;
   display: flex;
   justify-content: center;
 }
-.NuestraVision{
+
+.NuestraVision {
   margin-top: 30px;
-  height: 25vh;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.NuestraVision h2{
+
+.NuestraVision h2 {
   font-size: 30px;
+  text-align: center;
 }
-.NuestraVision p{
-  margin: 20px 100px 0px 100px;
+
+.NuestraVision p {
+  margin: 20px auto;
   text-align: center;
   font-size: 20px;
-  
+  max-width: 1000px;
 }
-.versiculo{
+
+.versiculo {
   display: flex;
   align-items: center;
-  margin: 0 15px 0 15px;
+  margin: 30px 15px;
   flex-direction: column;
 }
-.versiculo h2{
+
+.versiculo h2 {
   font-size: 40px;
   color: black;
   margin-top: 10px;
+  text-align: center;
 }
-.versiculo p{
-  text-align:center;
-  line-height: 1;
+
+.versiculo p {
+  text-align: center;
+  line-height: 1.4;
   padding-top: 20px;
   font-size: 20px;
-  text-transform:unset;
+  text-transform: unset;
   color: #8f8a69;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.pastores{
+/* PASTORES */
+.pastores {
   width: 100%;
-  height: 80vh;
+  padding: 50px 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  opacity: 0;
+  animation: fadeIn 0.9s ease forwards;
+  animation-delay: 0.5s;
 }
+
 .pfoto {
-  width: 30%;
+  width: 400px;
+  max-width: 100%;
   height: auto;
-  mask-image: linear-gradient( white 50%, transparent);
+  mask-image: linear-gradient(white 50%, transparent);
+  -webkit-mask-image: linear-gradient(white 50%, transparent);
 }
-  
-  
 
-.pastores .pfoto{
-  margin: 40px;
+.pastor {
+  max-width: 500px;
+  padding: 0 20px;
 }
-.pastor{
-  margin-left: 0;
-}
-.pastor h2{
-  font-size:xx-large;
 
+.pastor h2 {
+  font-size: 2.5rem;
+  text-align: center;
 }
-.pastor h3{
-  font-size:xx-large;
+
+.pastor h3 {
+  font-size: 2rem;
+  text-align: center;
 }
-.pastor p{
+
+.pastor p {
   padding-top: 20px;
   font-size: large;
+  text-align: center;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MINISTERIOS */
 .ministerios {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  opacity: 0;
+  animation: fadeIn 0.9s ease forwards;
+  animation-delay: 1.1s;
 }
 
 .slide {
@@ -199,14 +291,14 @@ nav{
 
 .desc {
   width: 50%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
   text-align: center;
-  padding: 0 20px;
+  padding: 20px;
 }
 
 .desc h2 {
@@ -220,11 +312,12 @@ nav{
 .desc p {
   font-size: 26px;
   font-weight: lighter;
+  max-width: 600px;
 }
 
 .imagen {
   width: 50%;
-  height: 100vh;
+  height: 100%;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -233,13 +326,14 @@ nav{
 }
 
 .imagen img {
-  max-width: 50vh;
-  max-height: 50vh;
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
 }
 
 /* Estilos para cada ministerio */
 .youngs .desc {
-  background-color: #0F0BDE;
+  background-color: #0f0bde;
 }
 
 .youngs .desc h2 {
@@ -255,11 +349,11 @@ nav{
 }
 
 .amadas .desc {
-  background-color: #B17457;
+  background-color: #b17457;
 }
 
 .amadas .desc h2 {
-  color: #F4EEEE;
+  color: #f4eeee;
 }
 
 .hombres .desc {
@@ -267,11 +361,12 @@ nav{
 }
 
 .hombres .desc h2 {
-  color: #4A4947;
+  color: #4a4947;
 }
 
 /* Flechas de navegación */
-.prev-btn, .next-btn {
+.prev-btn,
+.next-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -296,7 +391,8 @@ nav{
   right: 20px;
 }
 
-.prev-btn:hover, .next-btn:hover {
+.prev-btn:hover,
+.next-btn:hover {
   background-color: rgba(255, 255, 255, 0.6);
   transform: translateY(-50%) scale(1.1);
 }
@@ -325,74 +421,205 @@ nav{
   background-color: white;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .slide {
-      flex-direction: column-reverse;
-  }
+/* SERVICIOS Y JDE */
+.servicios,
+.jde {
+  background-color: #ffffff;
+  padding: 50px 20px;
+  opacity: 0;
+  animation: fadeIn 0.9s ease forwards;
+}
 
-  .desc, .imagen {
-      width: 100%;
-      height: 50vh;
-  }
+.servicios {
+  animation-delay: 0.7s;
+}
 
+.jde {
+  animation-delay: 1.1s;
+}
+
+/* CONTACTO Y FOOTER */
+.contacto {
+  padding: 50px 20px;
+  opacity: 0;
+  animation: fadeIn 0.9s ease forwards;
+  animation-delay: 1.3s;
+}
+
+footer {
+  padding: 30px 20px;
+  opacity: 0;
+  animation: fadeIn 0.9s ease forwards;
+  animation-delay: 1.5s;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 1200px) {
   .desc h2 {
-      font-size: 50px;
+    font-size: 60px;
   }
 
   .desc p {
-      font-size: 20px;
+    font-size: 22px;
+  }
+
+  .pastor h2,
+  .pastor h3 {
+    font-size: 2rem;
   }
 }
 
-/* Efecto de aparición para elementos de la página */
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+@media (max-width: 992px) {
+  .portada h1 {
+    font-size: 48px;
   }
-  
-  /* aplicacion de la animacion a nivel general */
- 
-  
-  /* Retrasar la animación para elementos secuenciales */
-  header {
-    animation-delay: 0.1s;
+
+  .portada p {
+    font-size: 32px;
   }
-  
-  .vision {
-    animation-delay: 0.3s;
+
+  .versiculo h2 {
+    font-size: 32px;
   }
-  
+
+  .versiculo p {
+    font-size: 18px;
+  }
+
   .pastores {
-    animation-delay: 0.5s;
+    flex-direction: column;
   }
-  
-  .servicios {
-    animation-delay: 0.7s;
-    background-color: #ffffff;
+
+  .pfoto {
+    width: 300px;
   }
-  
-  .ministerios {
-    animation-delay: 1.1s;
+}
+
+@media (max-width: 768px) {
+  /* Navigation */
+  .navbar ul {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgba(74, 73, 71, 0.95);
+    padding: 20px 0;
   }
-  
-  .jde {
-    animation-delay: 1.1s;
-    
+
+  .navbar ul.active {
+    display: flex;
   }
-  
-  .contacto {
-    animation-delay: 1.3s;
+
+  .navbar li {
+    margin: 10px 0;
+    text-align: center;
   }
-  
-  footer {
-    animation-delay: 1.5s;
+
+  .menu-toggle {
+    display: flex;
   }
-  
+
+  /* Header */
+  .portada h1 {
+    font-size: 36px;
+    padding-left: 30px;
+  }
+
+  .portada p {
+    font-size: 24px;
+    padding-left: 30px;
+  }
+
+  /* Ministerios */
+  .slide {
+    flex-direction: column-reverse;
+  }
+
+  .desc,
+  .imagen {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .desc {
+    padding: 20px;
+  }
+
+  .desc h2 {
+    font-size: 40px;
+  }
+
+  .desc p {
+    font-size: 18px;
+  }
+
+  /* Vision */
+  .NuestraVision p {
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  nav {
+    height: 70px;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+  }
+
+  .portada h1 {
+    font-size: 28px;
+    padding-left: 20px;
+    padding-bottom: 60px;
+  }
+
+  .portada p {
+    font-size: 20px;
+    padding-left: 20px;
+  }
+
+  .NuestraVision h2 {
+    font-size: 24px;
+  }
+
+  .NuestraVision p {
+    font-size: 16px;
+  }
+
+  .versiculo h2 {
+    font-size: 24px;
+  }
+
+  .versiculo p {
+    font-size: 16px;
+  }
+
+  .pastor h2,
+  .pastor h3 {
+    font-size: 1.5rem;
+  }
+
+  .pastor p {
+    font-size: 16px;
+  }
+
+  .desc h2 {
+    font-size: 32px;
+  }
+
+  .desc p {
+    font-size: 16px;
+  }
+
+  .prev-btn,
+  .next-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
 
