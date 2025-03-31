@@ -1,0 +1,141 @@
+.contacto {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    background-color: #f9f9f9;
+}
+
+@media (min-width: 768px) {
+    .contacto {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.escribenos, .datos {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .escribenos {
+        flex: 2;
+    }
+    
+    .datos {
+        flex: 1;
+    }
+}
+
+.escribenos h3, .datos h3 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #333;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.escribenos h3:after, .datos h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #6366f1;
+}
+
+.escribenos div {
+    margin-bottom: 20px;
+}
+
+.escribenos label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+.escribenos input, .escribenos textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #f5f7fa;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.escribenos input:focus, .escribenos textarea:focus {
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1), inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.escribenos textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.escribenos button {
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(99, 102, 241, 0.2);
+}
+
+.escribenos button:hover {
+    background-color: #4f46e5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(99, 102, 241, 0.3);
+}
+
+.datos {
+    display: flex;
+    flex-direction: column;
+}
+
+.numero {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    gap: 15px;
+}
+
+.numero i {
+    font-size: 20px;
+    color: #6366f1;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(99, 102, 241, 0.1);
+    border-radius: 50%;
+}
+
+.numero span {
+    color: #555;
+}
+
+.bold {
+    font-weight: 600;
+    color: #333;
+}
