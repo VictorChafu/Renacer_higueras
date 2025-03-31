@@ -137,6 +137,43 @@
 .datos a:hover {
     text-decoration: underline;
 }
+.direcciones{
+    display: flex;
+    flex-direction: column;
+}
+
+.numero{
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+.numero i{
+    padding-right: 15px;
+}
+.correo{
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+.correo i{
+    padding-right: 15px;
+}
+.cultogeneral{
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+.cultogeneral i{
+    padding-right: 15px;
+}
+.direccion{
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+.direccion i{
+    padding-right: 15px;
+}
 
 /* Optimizaciones móviles */
 @media (max-width: 480px) {
