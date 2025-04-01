@@ -161,13 +161,15 @@
     .contacto {
         flex-direction: column; 
         align-items: start ;
-        width: 210%;
         padding: 20px;
     }
 
     .escribenos, .datos {
         width: 90%; /* Se ajusta al ancho del contenedor sin ocupar todo */
         padding: 20px;
+    }
+    .escribenos{
+        width: 200%;
     }
 
     .direccion a {

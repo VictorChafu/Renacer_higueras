@@ -518,6 +518,7 @@ nav {
 @media (max-width: 768px) {
   header{
     background-position: center;
+    
   }
   /* Navigation */
   .navbar ul {
