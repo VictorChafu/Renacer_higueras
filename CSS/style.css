@@ -467,12 +467,7 @@ nav {
   animation-delay: 1.3s;
 }
 
-footer {
-  padding: 30px 20px;
-  opacity: 0;
-  animation: fadeIn 0.9s ease forwards;
-  animation-delay: 1.5s;
-}
+
 
 /* RESPONSIVE STYLES */
 @media (max-width: 1200px) {
