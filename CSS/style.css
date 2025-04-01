@@ -15,17 +15,29 @@
   scroll-behavior: smooth;
 }
 
-/* Efecto de aparición para elementos de la página */
-@keyframes fadeIn {
+/* Animation for scroll effect */
+@keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px)
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
+.scroll-effect {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-effect.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* HEADER */
 header {
@@ -34,9 +46,6 @@ header {
   background-image: url(../img/FotosRenacerHigueras/Iglesia/iglesia.jpg);
   background-position: center;
   background-size: cover;
-  opacity: 0;
-  animation: fadeIn 0.9s ease forwards;
-  animation-delay: 0.1s;
 }
 
 nav {
@@ -483,8 +492,8 @@ footer {
 }
 
 @media (max-width: 992px) {
-
   header{
+    background-position: unset;
   }
   .portada h1 {
     font-size: 48px;
