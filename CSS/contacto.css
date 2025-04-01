@@ -157,13 +157,20 @@
     padding-right: 15px;
 }
 
-/* Optimizaciones móviles */
 @media (max-width: 480px) {
     .contacto {
-        padding: 30px 15px;
+        flex-direction: column; 
+        align-items: start ;
+        width: 210%;
+        padding: 20px;
     }
-    
+
     .escribenos, .datos {
-        padding: 35px 30px;
+        width: 90%; /* Se ajusta al ancho del contenedor sin ocupar todo */
+        padding: 20px;
+    }
+
+    .direccion a {
+        font-size: 18px; /* Ajuste del tamaño del texto en enlaces */
     }
 }
