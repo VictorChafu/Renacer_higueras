@@ -31,6 +31,7 @@
     position: relative;
     width: 70%;
     height:70vh;
+    box-shadow: 10px 15px 50px black;
 }
 .carrusel-slide img{
     display: flex;
@@ -132,7 +133,6 @@
 
 
 .info-container p {
-    margin-top: 30px;
     font-size: 20px;
     line-height: 1.0;
     color: #989370;
@@ -145,7 +145,7 @@
 .info-container .versjd {
     color: #549269;
     font-style: italic;
-    padding-top: 5px;
+    padding-top: 10px;
     padding-bottom: 30px;
 }
 
