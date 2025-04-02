@@ -517,7 +517,7 @@ nav {
 
 @media (max-width: 768px) {
   header{
-    background-position: center;
+    background-position: -390px;
     
   }
   /* Navigation */
