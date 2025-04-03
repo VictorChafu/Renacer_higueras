@@ -44,3 +44,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Agregar el evento de desplazamiento a la ventana
     window.addEventListener('scroll', handleScroll);
   });
+  
+  // Efecto de desplazamiento suave UwU
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('nav');
+    
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('.navbar').classList.toggle('active');
+});
