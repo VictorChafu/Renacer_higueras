@@ -17,37 +17,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Incluir el CSS de la librería intl-tel-input -->
+
+
 
 
 </head>
 <body >
-    <header> <!--Dentro de este header irá todo lo que es el incio, el navbar, el titulo, un parrafo, etc... -->
-        <nav>
-            <a href="">
-                <img class="logo" src="./img/logos sin fondoRH/1.png" alt="">
-            </a>
-             <!--cambiarlo a fondo transparente-->
-            <div class="navbar">
-            <ul>
-                <li><a href="#pastores">Pastores</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#ministerios">Ministerios</a></li>
-                <li><a href="#Esperanza">Jardín de Esperanza</a></li>
-            </ul>
-        </div>
-        <div class="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        </nav>
-
-        <div class="portada"> <!--Acá va a ir el nombre de la iglesia, y algún mensajito-->
-            <p class="">Bienvenido a casa</p>
-            <h1 class="">Somos Renacer</h1>
-        </div>
-        <div class="wave" style="height: 20vh; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-8.08,146.86 C150.00,150.33 336.15,90.11 500.94,55.26 L500.00,150.33 L-1.31,152.83 Z" style="stroke: none; fill: white;"></path></svg></div>
-    </header>
+    <section class="header">
+        <header> <!--Dentro de este header irá todo lo que es el incio, el navbar, el titulo, un parrafo, etc... -->
+            <nav>
+                <a href="">
+                    <img class="logo" src="./img/logos sin fondoRH/1.png" alt="">
+                </a>
+                 <!--cambiarlo a fondo transparente-->
+                <div class="navbar">
+                <ul>
+                    <li><a href="#pastores">Pastores</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#ministerios">Ministerios</a></li>
+                    <li><a href="#Esperanza">Jardín de Esperanza</a></li>
+                </ul>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            </nav>
+    
+            <div class="portada"> <!--Acá va a ir el nombre de la iglesia, y algún mensajito-->
+                <p class="">Bienvenido a casa</p>
+                <h1 class="">Somos Renacer</h1>
+            </div>
+            <div class="wave" style="height: 20vh; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-8.08,146.86 C150.00,150.33 336.15,90.11 500.94,55.26 L500.00,150.33 L-1.31,152.83 Z" style="stroke: none; fill: white;"></path></svg></div>
+        </header>
+    </section>
+    
     
 
     <section class="vision"> <!--esta section será para colocar la vision, ojalá bien minimalista-->
@@ -467,25 +473,25 @@
         <form action="POST">
             <div class="escribenos">
                 <div>
-                    <h3>Escribenos</h3>
+                    <h3>Escríbenos</h3>
                 </div>
                 <div>
-                    <label for="">Nombre</label>
+                    <label for="user">Nombre</label>
                     <input type="text" id="user" required/>
                 </div>
                 <div>
-                    <label for="">Número de telefono</label>
-                    <input type="text" id="user" required/>
+                    <label for="numeror">Número de teléfono</label>
+                    <input type="number" id="numeror" required/>
                 </div>
                 <div>
-                    <label for="">Correo electronico</label>
-                    <input type="text" id="user" required/>
+                    <label for="correo">Correo electrónico</label>
+                    <input type="text" id="correo" required/>
                 </div>
                 <div>
-                    <label for="">Oramos por</label>
-                    <textarea name="" id=""></textarea>
+                    <label for="oracion">Oramos por</label>
+                    <textarea id="oracion"></textarea>
                 </div>
-                <button type="submit"> Enviar </button>
+                <button type="submit">Enviar</button>
             </div>
         </form>
         
@@ -517,20 +523,22 @@
     </section>
 
     <footer>
-        <img src="./img/logos sin fondoRH/3.png" alt="">
+        <img src="./img/logos sin fondoRH/3.png" alt="Renacer Higueras Logo">
         <div class="rs">
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-whatsapp"></i>
+            <a href="https://www.instagram.com/renacerhigueras/" target="_blank"><i class="fa-brands fa-instagram" ></i></a>
+            <a href="https://www.facebook.com/TCRHigueras?locale=es_LA" target="_blank"><i class="fa-brands fa-facebook" ></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
-        <p> <STRong>RENACER HIGUERAS</STRong> somos tu iglesia </p>
+        <p><strong>RENACER HIGUERAS</strong></p>
+        <p>somos tu iglesia</p>
     </footer>
-    <!-- aniadi un efecto de aparacion pero ahi vemos si te gusta -->
+
    
     <script src="./JS/index.js"></script>
-    <script src="JS/CarrouselJE.js"></script>
-    <script src="JS/menu.js"></script>
-    <script src="JS/scroll.js"></script>
+    <script src="./JS/CarrouselJE.js"></script>
+    <script src="./JS/menu.js"></script>
+    <script src="./JS/scroll.js"></script>
+    <script src="./JS/contacto.js"></script>
 
     
     

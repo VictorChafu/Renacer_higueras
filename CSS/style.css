@@ -46,6 +46,8 @@ header {
   background-image: url(../img/FotosRenacerHigueras/Iglesia/iglesia.jpg);
   background-position: center;
   background-size: cover;
+
+  
 }
 
 nav {
@@ -613,6 +615,7 @@ nav.scrolled {
   }
 
   .portada p {
+
     padding-left: 20px;
   }
 
