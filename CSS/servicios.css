@@ -129,11 +129,12 @@
             background-color: #757472; /* Color gris oscuro */
             color: white;
             border: none;
-            padding: 0.7rem 1.5rem;
+            padding: 5px 10px;
             border-radius: 4px;
+            text-decoration: none;
             cursor: pointer;
             font-weight: bold;
-            margin-top: 1rem;
+            font-size: 13px;
             transition: background-color 0.3s ease; /* Transición suave del color */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
