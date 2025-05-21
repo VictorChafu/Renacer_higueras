@@ -87,7 +87,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // === Scroll Reveal con IntersectionObserver ===
     const sections = [
-        '.header',
         '.vision',
         '.NuestraVision',
         '.versiculo',
