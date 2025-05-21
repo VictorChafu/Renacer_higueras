@@ -662,3 +662,676 @@ nav.scrolled {
     height: 40px;
   }
 }
+
+.servicios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+}
+        
+        .instagram {
+            flex: 1;
+            min-width: 300px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* aqui creo una cuadricula de 3 columnas */
+            grid-gap: 0.5rem; /* le hago unos espacios a la imagenes */
+        }
+
+        /* Estilo básico para las imágenes */
+        .instagram img {
+            width: 100%;
+            aspect-ratio: 1 / 1; /* Mantiene las imágenes cuadradas */
+            object-fit: cover; 
+            transition: all 0.3s ease; /* animacion suave al pasar por encima UwU */
+            position: relative;
+            display: block;
+        }
+        
+        /* creo un before para hacer un post algo luego de hacer la animacion */
+        .instagram img::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3); /* Capa negra semitransparente */
+            opacity: 0; 
+            transition: opacity 0.3s ease; /* Transición suave */
+            z-index: 1;
+        }
+        
+        /* Hace visible la capa oscura al pasar el ratón */
+        .instagram img:hover::before {
+            opacity: 1;
+        }
+        
+        /* Configuración del contenedor de imagen para efecto Instagram más realista */
+        .instagram .contenedor_imagen {
+            position: relative;
+            overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+        }
+        
+        .instagram .contenedor_imagen img {
+            width: 100%;
+            display: block; 
+        }
+        
+        /* Capa de superposición que aparece al pasar el ratón */
+        .instagram .contenedor_imagen .superposicion {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Fondo oscuro semitransparente */
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; 
+            opacity: 0; 
+            transition: opacity 0.3s ease; /* Transición suave */
+        }
+        
+        /* Hace visible la superposición al pasar el ratón */
+        .instagram .contenedor_imagen:hover .superposicion {
+            opacity: 1;
+        }
+        
+        /* Estilo para los iconos de likes y comentarios */
+        .instagram .contenedor_imagen .iconos_superposicion {
+            display: flex;
+            gap: 1rem; 
+            color: white; 
+        }
+        
+        /* Estilo para la información de servicios (lado derecho) */
+        .servicios > div:nth-child(2) {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem; 
+            
+        }
+        
+        /* Estilo para cada sección de información */
+        .servicio_general,
+        .plantaciones,
+        .grupos_pequenos {
+            background-color: #ffffff; 
+            padding: 1.5rem;
+            border-radius: 8px; /* Bordes redondeados */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+        }
+        
+        /* Estilo para los titulos de las secciones */
+        .informarcionservicio h3 {
+            color: #5e2d2d;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .informarcionservicio h4 {
+            color: #8f7c58;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .informarcionservicio p {
+            color: #504f4f;
+            margin: 0.3rem 0;
+        }
+        
+        /* Estilo para el botón */
+        #InformacionServicios {
+            background-color: #757472; /* Color gris oscuro */
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 13px;
+            transition: background-color 0.3s ease; /* Transición suave del color */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .servicios #InformacionServicios:hover {
+            background-color: #3b3a38; /* Color más oscuro al pasar el ratón */
+        }
+
+        /* Ajustes responsivos para pantallas medianas */
+        @media (max-width: 768px) {
+            .servicios {
+                flex-direction: column; /* Cambia a disposición vertical en pantallas pequeñas */
+            }
+            
+            .instagram {
+                grid-template-columns: repeat(3, 1fr); /* Mantiene 3 columnas */
+            }
+        }
+        
+
+        @media (max-width: 480px) {
+            .instagram {
+                grid-template-columns: repeat(2, 1fr); /* Reduce a 2 columnas en móviles */
+            }
+        }
+        
+        /* Estilos para el botón de like */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            position: relative;
+        }
+        
+        .icon {
+            width: 20px;
+            height: 20px;
+            transition: 0.2s linear;
+        }
+        
+        .icon path {
+            fill: white;
+            transition: 0.2s linear;
+        }
+        
+        .btn:hover > .icon {
+            transform: scale(1.2);
+        }
+        
+        .btn:hover > .icon path {
+            fill: rgb(255, 0, 0);
+        }.jde {
+    width: 100%;
+    height: 160vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #fbf2e3;
+    align-items: center;
+
+}
+
+.jde h2 {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 48px;
+    color: #549269;
+    font-family: "Bebas Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.carrusel-container {
+    margin-top: 30px;
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+}
+
+.carrusel {
+    position: relative;
+    width: 70%;
+    height:70vh;
+    box-shadow: 10px 15px 50px black;
+}
+.carrusel-slide img{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    position: static;
+    
+}
+
+.carrusel-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.carrusel-slide.active {
+    opacity: 1;
+}
+
+/* Flechas de navegación */
+.carrusel-prev, .carrusel-next {
+    box-shadow: 10px 15px 63px black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(108, 206, 62, 0.3);
+    color: rgb(0, 0, 0);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.carrusel-prev {
+    left: 20px;
+}
+
+.carrusel-next {
+    right: 20px;
+}
+
+.carrusel-prev:hover, .carrusel-next:hover {
+    box-shadow: 10px 15px 30px black;
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Indicadores */
+.carrusel-indicadores {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.carrusel-indicador {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carrusel-indicador.active {
+    background-color: white;
+}
+
+/* Sección de información */
+.info-container {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.info-container h3 {
+    font-size: 40px;
+    color: #216240;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+
+.info-container p {
+    font-size: 20px;
+    line-height: 1.0;
+    color: #989370;
+}
+.info-container h4{
+    padding-top: 20px;
+    font-size: 30px;
+    color: #a8a37a;
+}
+.info-container .versjd {
+    color: #549269;
+    font-style: italic;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+
+.info-container button {
+    margin-top: 20px;
+    background-color: #BAB58D;
+    color: #4A4947;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.info-container button:hover {
+    background-color: #a8a37a;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .jde {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .jde h2 {
+        font-size: 36px;
+        padding: 20px 0;
+    }
+
+    .carrusel-container {
+        height: 80vh;
+    }
+
+    .info-container {
+        padding: 20px;
+    }
+
+    .info-container h3 {
+        font-size: 24px;
+    }
+
+    .info-container p {
+        font-size: 14px;
+    }
+}
+
+/* Estilos base del contenedor  estos estilo para el contacto*/
+.contacto {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 30px;
+    background-color: #fbfbfb;
+    font-family: 'Georgia', serif;
+}
+
+.contacto form{
+    width: 50%;
+}
+
+/* Ajuste de layout responsivo */
+@media (min-width: 768px) {
+    .contacto {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+/* Estilos para las tarjetas */
+.escribenos, .datos {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+/* Distribución de espacio */
+@media (min-width: 768px) {
+    .escribenos {
+        flex: 3;
+    }
+    
+    .datos {
+        flex: 2;
+    }
+}
+
+/* Estilos de encabezados */
+.escribenos h3, .datos h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #333;
+    position: relative;
+    padding-bottom: 10px;
+    font-weight: normal;
+}
+
+.escribenos h3:after, .datos h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #4a5568;
+}
+
+/* Contenedor de campos del formulario */
+.escribenos div {
+    margin-bottom: 20px;
+}
+
+/* Estilos de etiquetas */
+.escribenos label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: #444;
+}
+
+/* Estilos de campos de entrada */
+.escribenos input ,textarea{
+    width: 100%;
+    padding: 10px 12px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+    font-size: 15px;
+    color: #333;
+}
+
+.escribenos input:focus {
+    outline: none;
+    border-color: #718096;
+    box-shadow: 0 0 0 2px rgba(113, 128, 150, 0.2);
+}
+
+/* Estilo del botón */
+.escribenos button {
+    background-color: #4a5568;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: normal;
+    cursor: pointer;
+    width: auto;
+}
+
+.escribenos button:hover {
+    background-color: #2d3748;
+}
+
+/* Sección de información de contacto */
+.datos {
+    display: flex;
+    flex-direction: column;
+}
+
+.datos p {
+    color: #4a5568;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.datos h3{
+    font-size: 30px;
+}
+
+/* Enlaces de contacto */
+.datos a {
+    display: block;
+    margin: 10px 0;
+    color: #4a5568;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.datos a:hover {
+    text-decoration: underline;
+}
+.direcciones{
+    display: flex;
+    flex-direction: column;
+}
+
+.direccion{
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+.direccion a{
+    font-size: 20px;
+    color: black;
+}
+.direccion i{
+    padding-right: 15px;
+}
+
+@media (max-width: 480px) {
+    .contacto {
+        flex-direction: column; 
+        align-items: start ;
+        padding: 20px;
+    }
+
+    .escribenos, .datos {
+        width: 90%; /* Se ajusta al ancho del contenedor sin ocupar todo */
+        padding: 20px;
+    }
+    .escribenos{
+        width: 200%;
+    }
+
+    .direccion a {
+        font-size: 18px; /* Ajuste del tamaño del texto en enlaces */
+    }
+}/* Footer styles */
+footer {
+    width: 100%;
+    min-height: 30vh; 
+    background-color: #BAB58D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 1rem; 
+}
+
+footer img {
+    width: 100px;
+    max-width: 30%; 
+    margin-bottom: 1.5rem;
+}
+
+.rs {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.rs i {
+    color: white;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.rs i:hover {
+    transform: scale(1.2);
+}
+
+footer p {
+    color: white;
+    font-size: clamp(0.9rem, 3vw, 1rem); 
+    text-align: center;
+    max-width: 90%; 
+    margin: 0 auto;
+}
+
+footer strong {
+    font-weight: 700;
+    display: inline-block; 
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 1.5rem 1rem;
+    }
+    
+    footer img {
+        width: 80px;
+        margin-bottom: 1rem;
+    }
+    
+    .rs {
+        padding-bottom: 1rem;
+    }
+    
+    .rs i {
+        padding: 0.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 1.2rem 0.8rem;
+    }
+    
+    footer img {
+        width: 70px;
+    }
+    
+    .rs i {
+        font-size: 1.8rem;
+        padding: 0.3rem;
+        margin: 0 0.3rem;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 320px) {
+    .rs {
+        flex-wrap: wrap;
+    }
+    
+    .rs i {
+        margin-bottom: 0.5rem;
+    }
+    
+    footer p {
+        font-size: 0.85rem;
+    }
+}

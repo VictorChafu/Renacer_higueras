@@ -1,61 +1,142 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Elementos del carrusel
-    const slides = document.querySelectorAll('.slide');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    const indicators = document.querySelectorAll('.indicator');
-    
-    let currentIndex = 0;
-    let intervalId;
+document.addEventListener('DOMContentLoaded', function () {
+    // === Carrusel #1 ===
+    const slides1 = document.querySelectorAll('.slide');
+    const prevBtn1 = document.querySelector('.prev-btn');
+    const nextBtn1 = document.querySelector('.next-btn');
+    const indicators1 = document.querySelectorAll('.indicator');
+    let currentIndex1 = 0;
+    let intervalId1;
 
-    // Función para mostrar un slide específico
-    function showSlide(index) {
-        slides.forEach(slide => slide.classList.remove('active'));
-        indicators.forEach(ind => ind.classList.remove('active'));
-        
-        currentIndex = index;
-        
-        // Manejo del índice circular
-        if (currentIndex < 0) currentIndex = slides.length - 1;
-        if (currentIndex >= slides.length) currentIndex = 0;
-        
-        slides[currentIndex].classList.add('active');
-        indicators[currentIndex].classList.add('active');
+    function showSlide1(index) {
+        currentIndex1 = (index + slides1.length) % slides1.length;
+        slides1.forEach((slide, i) => {
+            slide.classList.toggle('active', i === currentIndex1);
+            indicators1[i].classList.toggle('active', i === currentIndex1);
+        });
     }
 
-    // Eventos para botones prev/next
-    prevBtn.addEventListener('click', () => {
-        showSlide(currentIndex - 1);
-        resetInterval();
-    });
-    
-    nextBtn.addEventListener('click', () => {
-        showSlide(currentIndex + 1);
-        resetInterval();
-    });
-    
-    // Eventos para indicadores
-    indicators.forEach(indicator => {
-        indicator.addEventListener('click', () => {
-            const index = parseInt(indicator.getAttribute('data-index'));
-            showSlide(index);
-            resetInterval();
+    function startInterval1() {
+        intervalId1 = setInterval(() => showSlide1(currentIndex1 + 1), 5000);
+    }
+
+    function resetInterval1() {
+        clearInterval(intervalId1);
+        startInterval1();
+    }
+
+    if (slides1.length && prevBtn1 && nextBtn1) {
+        prevBtn1.addEventListener('click', () => {
+            showSlide1(currentIndex1 - 1);
+            resetInterval1();
+        });
+        nextBtn1.addEventListener('click', () => {
+            showSlide1(currentIndex1 + 1);
+            resetInterval1();
+        });
+        indicators1.forEach((ind, i) => {
+            ind.addEventListener('click', () => {
+                showSlide1(i);
+                resetInterval1();
+            });
+        });
+        startInterval1();
+    }
+
+    // === Carrusel #2 ===
+    const slides2 = document.querySelectorAll('.carrusel-slide');
+    const prevBtn2 = document.querySelector('.carrusel-prev');
+    const nextBtn2 = document.querySelector('.carrusel-next');
+    const indicators2 = document.querySelectorAll('.carrusel-indicador');
+    let currentIndex2 = 0;
+    let intervalId2;
+
+    function showSlide2(index) {
+        currentIndex2 = (index + slides2.length) % slides2.length;
+        slides2.forEach((slide, i) => {
+            slide.classList.toggle('active', i === currentIndex2);
+            indicators2[i].classList.toggle('active', i === currentIndex2);
+        });
+    }
+
+    function startInterval2() {
+        intervalId2 = setInterval(() => showSlide2(currentIndex2 + 1), 5000);
+    }
+
+    function resetInterval2() {
+        clearInterval(intervalId2);
+        startInterval2();
+    }
+
+    if (slides2.length && prevBtn2 && nextBtn2) {
+        prevBtn2.addEventListener('click', () => {
+            showSlide2(currentIndex2 - 1);
+            resetInterval2();
+        });
+        nextBtn2.addEventListener('click', () => {
+            showSlide2(currentIndex2 + 1);
+            resetInterval2();
+        });
+        indicators2.forEach((ind, i) => {
+            ind.addEventListener('click', () => {
+                showSlide2(i);
+                resetInterval2();
+            });
+        });
+        startInterval2();
+    }
+
+    // === Scroll Reveal con IntersectionObserver ===
+    const sections = [
+        '.header',
+        '.vision',
+        '.NuestraVision',
+        '.versiculo',
+        '.pastores',
+        '.pastor',
+        '.ministerios',
+        '.servicios',
+        '.contacto'
+    ];
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Mejor rendimiento
+            }
+        });
+    }, { threshold: 0.15 });
+
+    sections.forEach(selector => {
+        document.querySelectorAll(selector).forEach(el => {
+            el.classList.add('scroll-effect');
+            observer.observe(el);
         });
     });
-    
-    // Función para iniciar el carrusel automático
-    function startInterval() {
-        intervalId = setInterval(() => {
-            showSlide(currentIndex + 1);
-        }, 5000); // Cambiar cada 5 segundos
+
+    // === Navbar efecto al hacer scroll ===
+    const navbar = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar?.classList.add('scrolled');
+        } else {
+            navbar?.classList.remove('scrolled');
+        }
+    });
+
+    // === Toggle menú responsive ===
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navbarMenu = document.querySelector('.navbar ul');
+
+    if (menuToggle && navbarMenu) {
+        menuToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.navbar ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                navbarMenu.classList.remove('active');
+            });
+        });
     }
-    
-    // Función para reiniciar el intervalo
-    function resetInterval() {
-        clearInterval(intervalId);
-        startInterval();
-    }
-    
-    // Iniciar carrusel
-    startInterval();
 });
