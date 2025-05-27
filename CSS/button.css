@@ -1,0 +1,68 @@
+.btn-abrir {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  /* Fondo oscuro */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Contenido del modal */
+  .modal-contenido {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+  }
+  .modal-contenido #gp{
+    background-color: #c0953f;
+    margin: 0px 180px;
+    padding: 5px 5px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+    transition: background-color 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  /* Botón de cerrar */
+  .gpflotante .cerrar {
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+  }
+
+  /* Mostrar modal cuando está seleccionado */
+  #modal:target {
+    display: flex;
+  }
+
+  .gpflotante{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .gpflotante h3{
+    margin: 0 20px;
+    margin-top: 20px;
+  }
